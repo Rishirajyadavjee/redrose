@@ -1,4 +1,4 @@
-<style>
+
   :root {
     --background-color: #ffffff;
     --text-color: #333333;
@@ -521,4 +521,4 @@
     transform: translateY(-2px);
     transition: all 0.3s ease;
   }
-  </style>
+  

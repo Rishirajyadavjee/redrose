@@ -590,47 +590,6 @@
   });
   
 
-  /* this code for hamburger effect in navbar javascript*/
-   
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const sidebar = document.querySelector('.sidebar');
-        const overlay = document.querySelector('.overlay');
-        const mainContent = document.querySelector('.main-content');
-    
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
-    
-        hamburger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-    
-        // Handle menu item clicks
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // Remove clicked class from all links
-                navLinks.forEach(l => l.classList.remove('clicked'));
-                // Add clicked class to the clicked link
-                e.target.classList.add('clicked');
-                
-                if (window.innerWidth < 768) {
-                    toggleMenu();
-                }
-            });
-        });
-    
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768 && sidebar.classList.contains('active')) {
-                mainContent.style.marginLeft = '280px';
-            } else {
-                mainContent.style.marginLeft = '0';
-            }
-        });
-    });
     </script>
   </body>
   </html>

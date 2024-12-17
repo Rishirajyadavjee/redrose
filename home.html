@@ -11,9 +11,31 @@
       
     </head>
   <body>
+
+  <!--Hamburger effect like nav-->
+    <div class="menu-overlay"></div>
+    <div class="menu-bar">
+      <div class="close-button">×</div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="home.html">Videos</a></li>
+        <li><a href="home.html">Categories</a></li>
+        <li><a href="home.html">Trending</a></li>
+        <li><a href="home.html">Favorites</a></li>
+        <li><a href="home.html">Settings</a></li>
+        <li><a href="home.html">Help & Support</a></li>
+      </ul>
+    </div>
+   
+    <header class="header">
+      <div class="header-content">
+        <div class="hamburger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
   
-  <header class="header">
-    <div class="header-content">
       <div class="text-content">
         <a href="home.html"><h1>Red Rose</h1></a>
         <p>Discover Amazing Things With Us</p>
@@ -589,6 +611,26 @@
     });
   });
   
+/* hamburger java script hai*/
+  document.querySelector('.hamburger-menu').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.querySelector('.menu-bar').classList.toggle('active');
+      document.querySelector('.menu-overlay').classList.toggle('active');
+    });
+    
+    // Add click handler for the overlay
+    document.querySelector('.menu-overlay').addEventListener('click', function() {
+      document.querySelector('.hamburger-menu').classList.remove('active');
+      document.querySelector('.menu-bar').classList.remove('active');
+      this.classList.remove('active');
+    });
+    
+    // Add this JavaScript event handler for the close button
+    document.querySelector('.close-button').addEventListener('click', function() {
+      document.querySelector('.hamburger-menu').classList.remove('active');
+      document.querySelector('.menu-bar').classList.remove('active');
+      document.querySelector('.menu-overlay').classList.remove('active');
+    });
 
     </script>
   </body>

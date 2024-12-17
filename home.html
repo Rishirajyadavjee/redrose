@@ -11,9 +11,31 @@
       
     </head>
   <body>
+
+  <!--Hamburger effect like nav-->
+    <div class="menu-overlay"></div>
+    <div class="menu-bar">
+      <div class="close-button">×</div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="home.html">Videos</a></li>
+        <li><a href="home.html">Categories</a></li>
+        <li><a href="home.html">Trending</a></li>
+        <li><a href="home.html">Favorites</a></li>
+        <li><a href="home.html">Settings</a></li>
+        <li><a href="home.html">Help & Support</a></li>
+      </ul>
+    </div>
+   
+    <header class="header">
+      <div class="header-content">
+        <div class="hamburger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
   
-  <header class="header">
-    <div class="header-content">
       <div class="text-content">
         <a href="home.html"><h1>Red Rose</h1></a>
         <p>Discover Amazing Things With Us</p>
@@ -479,7 +501,7 @@
         <ul>
           <li><a href="https://www.facebook.com">Facebook</a></li>
           <li><a href="https://www.twitter.com">Twitter</a></li>
-          <li><a href="https://www.instagram.com">Instagram</a></li>
+          <li><a href="https://www.instagram.com/rishi_yadav_69">Instagram</a></li>
         </ul>
       </div>
     </div>
@@ -589,48 +611,27 @@
     });
   });
   
-
-  /* this code for hamburger effect in navbar javascript*/
-   
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const sidebar = document.querySelector('.sidebar');
-        const overlay = document.querySelector('.overlay');
-        const mainContent = document.querySelector('.main-content');
-    
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
-    
-        hamburger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-    
-        // Handle menu item clicks
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // Remove clicked class from all links
-                navLinks.forEach(l => l.classList.remove('clicked'));
-                // Add clicked class to the clicked link
-                e.target.classList.add('clicked');
-                
-                if (window.innerWidth < 768) {
-                    toggleMenu();
-                }
-            });
-        });
-    
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768 && sidebar.classList.contains('active')) {
-                mainContent.style.marginLeft = '280px';
-            } else {
-                mainContent.style.marginLeft = '0';
-            }
-        });
+/* hamburger java script hai*/
+  document.querySelector('.hamburger-menu').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.querySelector('.menu-bar').classList.toggle('active');
+      document.querySelector('.menu-overlay').classList.toggle('active');
     });
+    
+    // Add click handler for the overlay
+    document.querySelector('.menu-overlay').addEventListener('click', function() {
+      document.querySelector('.hamburger-menu').classList.remove('active');
+      document.querySelector('.menu-bar').classList.remove('active');
+      this.classList.remove('active');
+    });
+    
+    // Add this JavaScript event handler for the close button
+    document.querySelector('.close-button').addEventListener('click', function() {
+      document.querySelector('.hamburger-menu').classList.remove('active');
+      document.querySelector('.menu-bar').classList.remove('active');
+      document.querySelector('.menu-overlay').classList.remove('active');
+    });
+
     </script>
   </body>
   </html>

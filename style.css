@@ -563,6 +563,8 @@
       transition: all 0.3s ease;
     }
     
+
+    /* for hamburger effect of the navigation*/
     /* Update the menu-bar styles */
     .menu-bar {
       position: fixed;

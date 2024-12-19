@@ -1,4 +1,5 @@
-<html><head><base href="/" />
+<html>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Professional Services</title>
@@ -38,6 +39,38 @@
     left: 0;
     width: 100%;
     height: 50px;
+  }
+  
+  .nav-section {
+    background: var(--primary);
+    padding: 1rem 0;
+    text-align: left;
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    color: var(--accent);
+  }
+  
+  .home-link svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: currentColor;
   }
   
   .container {
@@ -109,6 +142,17 @@
   </style>
   </head>
   <body>
+    <nav class="nav-section">
+      <div class="nav-container">
+        <a href="https://example.com/home" class="home-link">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          Home
+        </a>
+      </div>
+    </nav>
+  
     <header class="header">
       <h1>Our Services</h1>
       <p>Innovative Solutions for Your Business</p>

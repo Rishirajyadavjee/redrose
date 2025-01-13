@@ -1,0 +1,171 @@
+<html>
+    <head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background: #e2e8f0; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #334155;
+  }
+
+  .container {
+    max-width: 480px;
+    width: 90%;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .lock-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    display: block;
+    fill: #3b82f6;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+    font-size: 1.8rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  button:hover {
+    background: #2563eb;
+  }
+
+  .help-text {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #0e4899;
+  }
+
+  .steps {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .steps li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .alert {
+    display: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <svg class="lock-icon" viewBox="0 0 24 24">
+      <path d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4z"/>
+    </svg>
+    
+    <h1>Password Recovery</h1>
+    
+    <div class="alert" id="successAlert">
+      Password reset instructions have been sent to your email.
+    </div>
+
+    <p>Follow these steps to reset your password:</p>
+    
+    <ol class="steps">
+      <li>Enter your registered email address below</li>
+      <li>Check your inbox for reset instructions</li>
+      <li>Click the reset link in the email</li>
+      <li>Create a new secure password</li>
+    </ol>
+
+    <form id="resetForm">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <button type="submit">Send Reset Instructions</button>
+    </form>
+
+    <p class="help-text">
+      Remember your password? <a href="../login_page/login_page.html">Back to Login</a><br>
+      Need help? <a href="#">Contact Support</a>
+    </p>
+  </div>
+
+  <script>
+    document.getElementById('resetForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const successAlert = document.getElementById('successAlert');
+      
+      // Simulate API call
+      setTimeout(() => {
+        successAlert.style.display = 'block';
+        document.getElementById('email').value = '';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

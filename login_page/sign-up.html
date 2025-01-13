@@ -1,5 +1,6 @@
-<html><head>
-<title>Red rose Registration</title>
+<html>
+<head>
+<title>Red Rose Sign-up</title>
 <style>
   * {
     box-sizing: border-box;
@@ -7,7 +8,7 @@
     padding: 0;
     font-family: Arial, sans-serif;
   }
-  
+
   body {
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     min-height: 100vh;
@@ -16,7 +17,7 @@
     align-items: center;
     padding: 20px;
   }
-  
+
   .container {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
@@ -25,23 +26,23 @@
     width: 100%;
     max-width: 400px;
   }
-  
+
   h1 {
     color: #333;
     text-align: center;
     margin-bottom: 30px;
   }
-  
+
   form {
     display: flex;
     flex-direction: column;
   }
-  
+
   label {
     margin-bottom: 5px;
     color: #555;
   }
-  
+
   input {
     padding: 10px;
     margin-bottom: 20px;
@@ -49,7 +50,7 @@
     border-radius: 5px;
     font-size: 16px;
   }
-  
+
   button {
     background-color: #4CAF50;
     color: white;
@@ -60,16 +61,34 @@
     font-size: 16px;
     transition: background-color 0.3s ease;
   }
-  
+
   button:hover {
     background-color: #45a049;
   }
-  
+
+  .login-link {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+  }
+
+  .login-link a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .login-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
   @media (max-width: 480px) {
     .container {
       padding: 20px;
     }
-    
+
     input, button {
       font-size: 14px;
     }
@@ -78,13 +97,25 @@
 </head>
 <body>
   <div class="container">
-    <h1>Forgot Password</h1>
-    <form action="#" method="POST">      
+    <h1>Join Red Rose</h1>
+    <form action="http://192.168.1.138/home.html" method="POST">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+      
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
-      <button type="submit">submit</button>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+      
+      <button type="submit">Sign-up</button>      
     </form>
-    <a href="register.html">Register here</a> &nbsp; <a href="register.html">forgot password</a>
+    <div class="login-link">
+      If you already registered, <a href="../login_page/login_page.html">Login</a> here.
+    </div>
   </div>
 </body>
 </html>

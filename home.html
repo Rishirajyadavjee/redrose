@@ -17,6 +17,35 @@
   <!--Hamburger effect like nav-->
   <div class="menu-overlay"></div>
   <div class="menu-bar">
+
+
+
+    <div class="menu-logo-container">
+      <svg class="menu-rose-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="menuRoseGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#ff1a1a"/>
+            <stop offset="100%" style="stop-color:#cc0000"/>
+          </radialGradient>
+        </defs>
+        <g transform="translate(50 50)">
+          <path d="M0,-15 C15,-15 15,15 0,15 C-15,15 -15,-15 0,-15" fill="url(#menuRoseGradient)" transform="rotate(0)">
+            <animate attributeName="d" dur="3s" repeatCount="indefinite"
+              values="M0,-15 C15,-15 15,15 0,15 C-15,15 -15,-15 0,-15;
+                      M0,-17 C17,-17 17,17 0,17 C-17,17 -17,-17 0,-17;
+                      M0,-15 C15,-15 15,15 0,15 C-15,15 -15,-15 0,-15"/>
+          </path>
+          <path d="M0,-15 C15,-15 15,15 0,15 C-15,15 -15,-15 0,-15" fill="url(#menuRoseGradient)" transform="rotate(60)"/>
+          <path d="M0,-15 C15,-15 15,15 0,15 C-15,15 -15,-15 0,-15" fill="url(#menuRoseGradient)" transform="rotate(120)"/>
+          <circle r="7" fill="#cc0000"/>
+          <path d="M0,15 L0,30" stroke="#2d5016" stroke-width="3"/>
+          <path d="M0,22 C-8,22 -8,30 0,30 C8,30 8,22 0,22" fill="#2d5016" transform="rotate(45)"/>
+        </g>
+      </svg>
+    </div>
+
+
+
     <div class="close-button">×</div>
     <ul>
       <li><a href="home.html">Home</a></li>

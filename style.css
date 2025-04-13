@@ -1,3 +1,25 @@
+.menu-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px;
+  position: relative;
+}
+
+.menu-rose-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.menu-rose-logo:hover {
+  transform: scale(1.1) rotate(10deg);
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+}
+
+
 :root {
   --background-color: #ffffff;
   --text-color: #333333;

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Premium Content - Red Rose</title>
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #333333;
+      --card-background: #ffffff;
+      --nav-background: #f8f9fa;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .premium-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 30px;
+    }
+
+    .premium-header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 40px;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      border-radius: 15px;
+      color: white;
+    }
+
+    .premium-header h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .premium-plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .plan-card {
+      background: var(--card-background);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .plan-card.popular {
+      border: 2px solid #6a11cb;
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: 20px;
+      right: -35px;
+      background: #6a11cb;
+      color: white;
+      padding: 8px 40px;
+      transform: rotate(45deg);
+      font-size: 14px;
+    }
+
+    .plan-name {
+      font-size: 1.8em;
+      color: #6a11cb;
+      margin-bottom: 15px;
+    }
+
+    .plan-price {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .plan-price span {
+      font-size: 0.4em;
+      vertical-align: super;
+    }
+
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px 0;
+    }
+
+    .plan-features li {
+      margin: 10px 0;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .subscribe-button {
+      display: inline-block;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .subscribe-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+    }
+
+    .benefits-section {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .benefit-card {
+      padding: 20px;
+      background: var(--card-background);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .benefit-icon {
+      font-size: 2.5em;
+      color: #6a11cb;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="premium-container">
+    <div class="premium-header">
+      <h1>Upgrade to Premium</h1>
+      <p>Get exclusive access to premium content and features</p>
+    </div>
+
+    <div class="premium-plans">
+      <div class="plan-card">
+        <div class="plan-name">Basic</div>
+        <div class="plan-price">$9<span>/month</span></div>
+        <ul class="plan-features">
+          <li>✓ HD Quality Content</li>
+          <li>✓ Ad-free Experience</li>
+          <li>✓ Access to Basic Library</li>
+          <li>✓ 1 Device Support</li>
+        </ul>
+        <a href="#" class="subscribe-button">Subscribe Now</a>
+      </div>
+
+      <div class="plan-card popular">
+        <div class="popular-badge">POPULAR</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">$19<span>/month</span></div>
+        <ul class="plan-features">
+          <li>✓ 4K Quality Content</li>
+          <li>✓ Ad-free Experience</li>
+          <li>✓ Full Library Access</li>
+          <li>✓ 3 Devices Support</li>
+          <li>✓ Offline Downloads</li>
+        </ul>
+        <a href="#" class="subscribe-button">Subscribe Now</a>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Ultimate</div>
+        <div class="plan-price">$29<span>/month</span></div>
+        <ul class="plan-features">
+          <li>✓ 8K Quality Content</li>
+          <li>✓ Ad-free Experience</li>
+          <li>✓ Full Library Access</li>
+          <li>✓ Unlimited Devices</li>
+          <li>✓ Offline Downloads</li>
+          <li>✓ Early Access</li>
+        </ul>
+        <a href="#" class="subscribe-button">Subscribe Now</a>
+      </div>
+    </div>
+
+    <div class="benefits-section">
+      <h2>Premium Benefits</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🎥</div>
+          <h3>High Quality</h3>
+          <p>Watch all content in stunning 4K-8K quality</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📱</div>
+          <h3>Multi-device</h3>
+          <p>Watch on multiple devices simultaneously</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>No Ads</h3>
+          <p>Enjoy uninterrupted viewing experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.subscribe-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Thank you for your interest! This is a demo - subscription processing coming soon.');
+      });
+    });
+  </script>
+</body>
+</html>
+
